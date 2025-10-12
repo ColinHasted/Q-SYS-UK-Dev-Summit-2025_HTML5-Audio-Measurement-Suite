@@ -1,0 +1,31 @@
+.gain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bypass-btn {
+  height: 1.5rem;
+  width: 3.6rem;
+  background: linear-gradient(145deg, #663333, #552222);
+  border: 0.06rem solid rgba(255, 100, 100, 0.3);
+  border-radius: 0.2rem;
+  color: #ffcccc;
+  cursor: pointer;
+  font-size: 0.6rem;
+  padding: 0.3rem 0.5rem;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: linear-gradient(145deg, #773333, #662222);
+    border-color: #ff6666;
+  }
+
+  &.active {
+    background: linear-gradient(145deg, #b10505, #730202);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}

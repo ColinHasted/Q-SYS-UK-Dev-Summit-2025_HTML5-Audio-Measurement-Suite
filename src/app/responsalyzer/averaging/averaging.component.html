@@ -1,0 +1,34 @@
+<div class="control-group">
+  <h3 class="control-group__title">Averaging</h3>
+  <div class="control-group__display averaging">
+    <div class="averaging__row">
+            MAG
+
+      <app-editable-value
+        [value]="responsalyzerComponent().responseAveragingTime()"
+        [mode]="'time'"
+        [min]="0.4"
+        [max]="10"
+        [step]="0.1"
+        [decimals]="1"
+        unit="s"
+        (valueChange)="responsalyzerComponent().setResponseAveragingTime($event)"
+      >
+      </app-editable-value>
+      RTA
+
+      <app-editable-value
+        [value]="responsalyzerComponent().rtaAveragingTime()"
+        [mode]="'time'"
+        [min]="0.04"
+        [max]="10"
+        [step]="0.1"
+        [decimals]="2"
+        unit="s"
+        (valueChange)="responsalyzerComponent().setRTAResponseTime($event)"
+      >
+      </app-editable-value>
+
+    </div>
+  </div>
+</div>

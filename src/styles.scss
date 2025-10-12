@@ -1,0 +1,152 @@
+/* Load the full SinkinSans family (weights / italics). Files are in public/assets/fonts */
+@font-face {
+  font-family: 'SinkinSans';
+  src: url('/assets/fonts/SinkinSans-100Thin-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'SinkinSans';
+  src: url('/assets/fonts/SinkinSans-200XLight-webfont.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'SinkinSans';
+  src: url('/assets/fonts/SinkinSans-300Light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'SinkinSans';
+  src: url('/assets/fonts/SinkinSans-400Regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'SinkinSans';
+  src: url('/assets/fonts/SinkinSans-500Medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'SinkinSans';
+  src: url('/assets/fonts/SinkinSans-600SemiBold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'SinkinSans';
+  src: url('/assets/fonts/SinkinSans-700Bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'SinkinSans';
+  src: url('/assets/fonts/SinkinSans-800Black-webfont.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'SinkinSans';
+  src: url('/assets/fonts/SinkinSans-900XBlack-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background:
+    linear-gradient(135deg, #1a1d22, #252a30 50%, #1a1d22);
+  color: #e8e8e8;
+  font-family: SinkinSans, Helvetica, sans-serif;
+  font-size: max(6px, 1.25vw);
+  height: calc(100vw * 9 / 16);
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  width: 100vw;
+
+}
+
+
+.control-group {
+  width: 14rem;
+
+  &__title {
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0 0 0.5rem 0;
+    padding-bottom: 0.5rem;
+  }
+
+  &__display {
+    background: rgba(0, 0, 0, 0.3);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  }
+}
+
+.full-size {
+  width: 100%;
+  height: 100%;
+}
+
+/* Prevent text selection on interactive button controls while keeping inputs/textarea selectable */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+[role="button"] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Make only the editable-value (and form fields) selectable. This disables selection app-wide
+   but re-enables it where text editing is expected. */
+/* Disable selection everywhere by default */
+html, body, body * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Re-enable selection for editable controls and the editable-value component */
+app-editable-value,
+app-editable-value *,
+input,
+textarea,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}

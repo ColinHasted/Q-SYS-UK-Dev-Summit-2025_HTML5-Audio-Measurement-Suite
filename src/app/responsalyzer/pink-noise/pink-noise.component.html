@@ -1,0 +1,16 @@
+<div class="control-group">
+  <h3 class="control-group__title">Pink Noise</h3>
+  <div class="control-group__display pink-noise">
+    <app-pink-toggle [checked]="!pinkNoiseComponent.mute()" (checkedChange)="onMuteToggle()"></app-pink-toggle>
+
+    <app-editable-value
+      [value]="pinkNoiseComponent.level()"
+      (valueChange)="pinkNoiseComponent.setLevel($event)"
+      [min]="-100"
+      [max]="20"
+      [step]="0.1"
+      [decimals]="1"
+      unit="dB"
+    ></app-editable-value>
+  </div>
+</div>

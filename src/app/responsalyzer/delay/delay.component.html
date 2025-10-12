@@ -1,0 +1,19 @@
+<div class="control-group">
+  <h3 class="control-group__title">Delay</h3>
+  <div class="control-group__display delay">
+    <button class="auto-set-btn" (click)="onAutoSet()">Auto Set</button>
+
+    <app-editable-value
+      label="Delay"
+      [value]="delay()"
+      (valueChange)="setDelay($event)"
+
+      [min]="0"
+      [max]="1500"
+      [step]="1"
+      [decimals]="0"
+      unit="ms"
+  >
+    </app-editable-value>
+  </div>
+</div>

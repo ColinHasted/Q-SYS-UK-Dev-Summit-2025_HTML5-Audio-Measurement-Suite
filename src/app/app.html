@@ -1,0 +1,59 @@
+<div class="app">
+  <div class="app__body">
+    <div class="app__header">
+      <img
+        class="app__header--logo"
+        src="/assets/images/logo/q-sys-logo-reversed.svg"
+      />
+      <span class="app__header--divider"></span> Acoustic Response & System
+      Evaluator
+
+      <div class="app__header-controls">
+        <button class="freeze-button" [class.frozen]="isFrozen()" (click)="toggleFreeze()">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden>
+            <path d="M12 2v20M2 12h20M6 6l12 12M6 18L18 6"/>
+          </svg>
+          <span class="freeze-text">Freeze</span>
+        </button>
+
+        <app-view-toggle [checked]="showRta()" (checkedChange)="showRta.set($event)"></app-view-toggle>
+      </div>
+    </div>
+
+    <div class="app__responsalyzer">
+      <app-impulse-response 
+        [impulse]="responsalyzerComponent.impulse()"
+        [freeze]="isFrozen()" />
+      <app-phase
+        [frequencies]="responsalyzerComponent.frequencies()"
+        [phase]="responsalyzerComponent.phase()"
+        [freeze]="isFrozen()"
+      />
+
+      <app-magnitude [hidden]="showRta()"
+        [frequencies]="responsalyzerComponent.frequencies()"
+        [magnitude]="responsalyzerComponent.magnitude()"
+        [coherence]="responsalyzerComponent.coherence()"
+        [freeze]="isFrozen()"
+      />
+
+      <app-rta [hidden]="!showRta()"
+        [frequencies]="responsalyzerComponent.frequencies()"
+        [rta]="responsalyzerComponent.response()"
+        [freeze]="isFrozen()"
+      />
+
+    </div>
+  </div>
+  <div class="app__sidebar">
+    <app-spl></app-spl>
+    <app-gain [responsalyzerComponent]="responsalyzerComponent"></app-gain>
+    <app-delay [responsalyzerComponent]="responsalyzerComponent"></app-delay>
+
+    <app-averaging
+      [responsalyzerComponent]="responsalyzerComponent"
+    ></app-averaging>
+
+    <app-pink-noise></app-pink-noise>
+  </div>
+</div>
