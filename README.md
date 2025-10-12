@@ -1,4 +1,4 @@
-# Q-SYS UK Development Summit 2025 - HTML5 Responsalyzer Demo
+# Q-SYS UK Development Summit 2025 - HTML5 Audio Measurement Suite
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
 
