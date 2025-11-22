@@ -48,7 +48,7 @@ import { FormsModule } from '@angular/forms';
     }
 
     .value-input {
-      width: 3.75rem;
+      width: 3.9rem;
       height: 1.5rem;
       background: #1a1a1a;
       border: 0.0625rem solid #333;
