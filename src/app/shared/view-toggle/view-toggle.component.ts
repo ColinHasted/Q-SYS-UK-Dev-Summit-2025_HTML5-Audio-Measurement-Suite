@@ -1,10 +1,10 @@
 import { Component, input, output } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-view-toggle',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   template: `
     <div class="view-toggle">
       <div class="toggle-switch">
