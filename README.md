@@ -1,6 +1,20 @@
-# Q-SYS UK Development Summit 2025 - HTML5 Audio Measurement Suite
+# ARSE - Acoustic Response and System Evaluator
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+A fully-featured acoustic analysis and visualization tool for professional audio system measurement and optimization. ARSE provides real-time visual feedback for acoustic measurements, utilizing the power of Q-SYS signal processing.
+
+Built with **Q-SYS Remote Web Components (QRWC)** and Angular 20, this web-based visualization tool connects to your Q-SYS Core to display measurement data in an intuitive, responsive interface.
+
+*Written as a demonstration for the Q-SYS UK Developer Summit 2025.*
+
+## Features
+
+- **Real-Time Analysis (RTA)**: Live frequency analysis visualization
+- **Sound Pressure Level (SPL) Metering**: Real-time SPL display
+- **Transfer Function Analysis**: Magnitude and phase response visualization
+- **Impulse Response**: Time-domain analysis display
+- **Pink Noise Generator**: Test signal control
+- **Advanced Controls**: Gain, delay, and time-averaging adjustments
+- **Professional Interface**: Clean, modern UI optimized for system commissioning and tuning
 
 ## Development server
 
